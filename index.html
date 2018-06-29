@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Arcade Adventure | Frontend Udacity Project</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Open+Sans" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<div class="row margin-top">
+				<div class="col-12 text-center">
+					<h1 class="h1">Arcade Adventure</h1>
+					<p class="text"><strong>Select you character:</strong></p>
+				</div>
+			</div>
+		</header>
+		<main class="text-center">
+			<!-- CHARACTERS -->
+			<div class="char-select-row">
+				<div class="char-select-item" id="boy">
+					<span>
+						<img src="images/char-boy.png">
+						<p><strong>Little Boy</strong></p>
+					</span>
+				</div>
+				<div class="char-select-item" id="cat">
+					<span>
+						<img src="images/char-cat-girl.png">
+						<p><strong>Cat</strong></p>
+					</span>
+				</div>
+				<div class="char-select-item" id="horn">
+					<span>
+						<img src="images/char-horn-girl.png">
+						<p><strong>horn</strong></p>
+					</span>
+				</div>
+				<div class="char-select-item" id="pink">
+					<span>
+						<img src="images/char-pink-girl.png">
+						<p><strong>Pink</strong></p>
+					</span>
+				</div>
+				<div class="char-select-item" id="princess">
+					<span>
+						<img src="images/char-princess-girl.png">
+						<p><strong>Princess</strong></p>
+					</span>
+				</div>
+			</div>
+			<!-- PLAY BUTTON -->
+			<div class="row margin-top">
+				<div class="col-12 text-center game-start">
+					<button id="start-game" class="play" name="start">PLAY</button>
+				</div>
+			</div>
+		</main>
+		<footer class="margin-top">
+			<p class="text-center">Udacity Front-end Nanodegreee - Copyright 2018</p>
+		</footer>
+	</div>
+	<script type="text/JavaScript">
+			// select the character "boy" by default when clicking play
+			document.getElementById('start-game').addEventListener('click', function(e){
+				let selectedChar = 'boy';
+				// load the game by passing the character
+				window.location = `game.html?${selectedChar}`;
+				return false;
+			});
+		// selected character
+		const charDivs = Array.prototype.slice.call(document.getElementsByClassName('char-select-item'));
+		charDivs.map(char => char.addEventListener('click', () => {
+			// load the game by passing the character
+			window.location = `game.html?${char.id}`;
+			return false;
+		}));	</script>
+</body>
+</html>

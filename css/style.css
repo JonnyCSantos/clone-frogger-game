@@ -1,0 +1,70 @@
+h1, h2, h3, p, strong {
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1.h1 {
+	font-family: 'Do Hyeon', sans-serif !important;
+	font-size: 45pt;
+	color: #6b84cb;
+}
+
+p.text {
+	font-size: 15pt;
+}
+
+p.text strong{
+	font-size: 20pt;
+}
+
+.margin-top {
+	margin-top: 50px;
+}
+
+.margin-bottom-game {
+	margin-bottom: -50px;
+}
+
+.char-select-item {
+	display: inline-block;
+	cursor: pointer;
+}
+
+.char-select-item:hover {
+	background-color: #cffbcd;
+}
+
+#start-game {
+	background-color: #5cb658;
+	color: #fff;
+	border-radius: 5px;
+	border-style: none;
+	padding: 10px 30px;
+	font-size: 20pt;
+	cursor: pointer;
+}
+
+#start-game:hover {
+	background-color: #31932c;
+}
+
+p.score {
+	font-family: 'Do Hyeon', sans-serif !important;
+	font-size: 20pt;
+}
+
+div#score {
+    position: absolute;
+    margin-top: 45px;
+    margin-left: 130px;
+}
+
+div#game-lives img {
+    height: auto;
+    width: 5%;
+    margin-top: -25px;
+}
+
+canvas {
+	display: flex;
+	margin: 0 auto;
+}
